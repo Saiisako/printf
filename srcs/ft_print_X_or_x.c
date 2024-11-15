@@ -6,7 +6,7 @@
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 18:01:52 by skock             #+#    #+#             */
-/*   Updated: 2024/11/15 16:51:58 by skock            ###   ########.fr       */
+/*   Updated: 2024/11/15 19:44:23 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 static int	ft_putchar(char c)
 {
-	return (write(1, &c, 1)); // return 1 car la fonction s'est effectuée.
+	return (write(1, &c, 1));
 }
+
 int	ft_print_X_or_x(unsigned long nb, char *format)
 {
 	int	count;
-	
+
 	count = 0;
 	if (nb >= 16)
 	{
