@@ -1,13 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_int.c                                     :+:      :+:    :+:   */
+/*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 18:18:58 by skock             #+#    #+#             */
-/*   Updated: 2024/11/12 18:29:30 by skock            ###   ########.fr       */
+/*   Created: 2024/11/14 15:30:51 by skock             #+#    #+#             */
+/*   Updated: 2024/11/15 16:46:15 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
+
+static void	ft_putchar(unsigned int c)
+{
+	write(1, &c, 1);
+}
+int	ft_print_c(unsigned char c)
+{
+	ft_putchar(c);
+	return (1);
+}

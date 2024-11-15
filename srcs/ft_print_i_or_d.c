@@ -1,19 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_char.c                                    :+:      :+:    :+:   */
+/*   ft_print_int.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: skock <skock@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 18:06:14 by skock             #+#    #+#             */
-/*   Updated: 2024/11/12 18:25:20 by skock            ###   ########.fr       */
+/*   Created: 2024/11/12 18:18:58 by skock             #+#    #+#             */
+/*   Updated: 2024/11/15 16:45:08 by skock            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 
-int	main()
+// %i ou %d
+
+static int	ft_intlen(int n)
 {
-	char	c = 's';
-	return 0;
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+	{
+		n = -n;
+		i++;
+	}
+	while (n > 0)
+	{
+		n = n / 10;
+		i++;
+	}
+	return (i);
+}
+int	ft_print_i_or_d(signed int nb)
+{
+	char	*str;
+	
+	str = ft_itoa(nb);
+	ft_putstr_fd(str, 1);
+	free(str);
+	return (ft_intlen(nb));
 }
